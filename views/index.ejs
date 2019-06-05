@@ -1,0 +1,38 @@
+<% include blocks/header.ejs %>
+<div class="container">
+    <div class="row justify-content-center">
+        <% if(!user.sess_id && !user.sess_login) { %>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/reg">Зарегистрироваться</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth">Войти</a>
+                </li>
+            </ul>
+        <% } else { %>
+            <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% users.forEach(function(user){ %>
+                        <tr>
+                            <th scope="row"><%= user._id %></th>
+                            <td><%= user.login %></td>
+                            <td><%= user.createdAt %></td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+            </table>
+            <a href="/api/auth/logout">Выход</a>
+        <% } %>
+    </div>
+
+</div>
+
+<% include blocks/footer.ejs %>

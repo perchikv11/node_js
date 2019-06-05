@@ -1,0 +1,19 @@
+
+.form-auth {
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.form-signin {
+    padding: 15px;
+    margin: auto;
+}
+
+.btn a {
+    color: #fff;
+}
+
+.btn a:hover {
+    color: #fff;
+}

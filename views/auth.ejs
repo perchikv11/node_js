@@ -1,0 +1,20 @@
+<% include blocks/header.ejs %>
+<div class="container">
+    <div class="row text-center form-auth">
+        <form method="POST" class="form-signin login">
+            <h1>Авторизация</h1>
+            <div class="form-group">
+              <label for="login-login">Email address</label>
+              <input type="email" class="form-control" name="login" id="login-login" aria-describedby="emailHelp" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input type="password" class="form-control" name="password" id="login-password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-success login-button">Войти</button>
+            <button class="btn btn-primary"><a href="/reg">Зарегистрироваться</a></button>
+          </form>
+    </div>
+</div>
+
+<% include blocks/footer.ejs %>
